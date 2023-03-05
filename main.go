@@ -64,7 +64,7 @@ func genResponse(msg string) (string, error) {
 }
 func initLog() {
 	// 写入文件
-	f, err := os.OpenFile("./log.txt", os.O_APPEND|os.O_CREATE, 0777)
+	f, err := os.OpenFile("./log.txt", os.O_APPEND|os.O_WRONLY, 0777)
 	if err != nil {
 		panic(err)
 	}
